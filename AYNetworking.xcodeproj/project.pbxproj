@@ -7,11 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D2378AB16C6757C0005D559 /* AYNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D41AA2616C671390018B6C4 /* AYNetworking.h */; };
-		3D2378AE16C676410005D559 /* AYNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D41AA2616C671390018B6C4 /* AYNetworking.h */; };
+		3D2378AB16C6757C0005D559 /* AYNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D41AA2616C671390018B6C4 /* AYNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D2378AE16C676410005D559 /* AYNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D41AA2616C671390018B6C4 /* AYNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D41AA1A16C671390018B6C4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D41AA1916C671390018B6C4 /* Cocoa.framework */; };
 		3D41AA2416C671390018B6C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D41AA2216C671390018B6C4 /* InfoPlist.strings */; };
 		3D41AA3416C672460018B6C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D41AA3316C672460018B6C4 /* Foundation.framework */; };
+		3D50DC0A16C67929009D224D /* AFHTTPClient+AYRequestMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D50DC0616C67929009D224D /* AFHTTPClient+AYRequestMethod.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3D50DC0B16C67929009D224D /* AFHTTPClient+AYRequestMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D50DC0616C67929009D224D /* AFHTTPClient+AYRequestMethod.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3D50DC0C16C67929009D224D /* AFHTTPClient+AYRequestMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D50DC0716C67929009D224D /* AFHTTPClient+AYRequestMethod.m */; };
+		3D50DC0D16C67929009D224D /* AFHTTPClient+AYRequestMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D50DC0716C67929009D224D /* AFHTTPClient+AYRequestMethod.m */; };
+		3D50DC0E16C67929009D224D /* AFHTTPClient+AYRequestMethodGET.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D50DC0816C67929009D224D /* AFHTTPClient+AYRequestMethodGET.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3D50DC0F16C67929009D224D /* AFHTTPClient+AYRequestMethodGET.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D50DC0816C67929009D224D /* AFHTTPClient+AYRequestMethodGET.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3D50DC1016C67929009D224D /* AFHTTPClient+AYRequestMethodGET.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D50DC0916C67929009D224D /* AFHTTPClient+AYRequestMethodGET.m */; };
+		3D50DC1116C67929009D224D /* AFHTTPClient+AYRequestMethodGET.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D50DC0916C67929009D224D /* AFHTTPClient+AYRequestMethodGET.m */; };
+		3DDE356416C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodDELETE.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDE355C16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodDELETE.h */; };
+		3DDE356516C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodDELETE.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDE355D16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodDELETE.m */; };
+		3DDE356616C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPATCH.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDE355E16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPATCH.h */; };
+		3DDE356716C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPATCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDE355F16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPATCH.m */; };
+		3DDE356816C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPOST.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDE356016C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPOST.h */; };
+		3DDE356916C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPOST.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDE356116C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPOST.m */; };
+		3DDE356A16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPUT.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDE356216C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPUT.h */; };
+		3DDE356B16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPUT.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDE356316C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPUT.m */; };
+		833C6053CBA34047B06CB5BB /* libPods-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF99A7F421914D969A9BF2ED /* libPods-ios.a */; };
+		EBE7ADF70EBC438EA765DD44 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 795C0255596343E2AE9ED337 /* libPods-osx.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2DEDCD9929464FC0AB6F9F51 /* Pods-ios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.xcconfig"; path = "Pods/Pods-ios.xcconfig"; sourceTree = SOURCE_ROOT; };
 		3D41AA1616C671390018B6C4 /* AYNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AYNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D41AA1916C671390018B6C4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3D41AA1C16C671390018B6C4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -38,6 +57,21 @@
 		3D41AA2616C671390018B6C4 /* AYNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYNetworking.h; sourceTree = "<group>"; };
 		3D41AA3216C672460018B6C4 /* libAYNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAYNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D41AA3316C672460018B6C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3D50DC0616C67929009D224D /* AFHTTPClient+AYRequestMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPClient+AYRequestMethod.h"; sourceTree = "<group>"; };
+		3D50DC0716C67929009D224D /* AFHTTPClient+AYRequestMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPClient+AYRequestMethod.m"; sourceTree = "<group>"; };
+		3D50DC0816C67929009D224D /* AFHTTPClient+AYRequestMethodGET.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPClient+AYRequestMethodGET.h"; sourceTree = "<group>"; };
+		3D50DC0916C67929009D224D /* AFHTTPClient+AYRequestMethodGET.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPClient+AYRequestMethodGET.m"; sourceTree = "<group>"; };
+		3DDE355C16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodDELETE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPClient+AYRequestMethodDELETE.h"; sourceTree = "<group>"; };
+		3DDE355D16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodDELETE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPClient+AYRequestMethodDELETE.m"; sourceTree = "<group>"; };
+		3DDE355E16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPATCH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPClient+AYRequestMethodPATCH.h"; sourceTree = "<group>"; };
+		3DDE355F16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPATCH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPClient+AYRequestMethodPATCH.m"; sourceTree = "<group>"; };
+		3DDE356016C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPOST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPClient+AYRequestMethodPOST.h"; sourceTree = "<group>"; };
+		3DDE356116C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPOST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPClient+AYRequestMethodPOST.m"; sourceTree = "<group>"; };
+		3DDE356216C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPUT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPClient+AYRequestMethodPUT.h"; sourceTree = "<group>"; };
+		3DDE356316C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPUT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPClient+AYRequestMethodPUT.m"; sourceTree = "<group>"; };
+		795C0255596343E2AE9ED337 /* libPods-osx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF99A7F421914D969A9BF2ED /* libPods-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9E39539651F42948C488502 /* Pods-osx.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osx.xcconfig"; path = "Pods/Pods-osx.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D41AA1A16C671390018B6C4 /* Cocoa.framework in Frameworks */,
+				EBE7ADF70EBC438EA765DD44 /* libPods-osx.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D41AA3416C672460018B6C4 /* Foundation.framework in Frameworks */,
+				833C6053CBA34047B06CB5BB /* libPods-ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +102,8 @@
 				3D41AA1F16C671390018B6C4 /* AYNetworking */,
 				3D41AA1816C671390018B6C4 /* Frameworks */,
 				3D41AA1716C671390018B6C4 /* Products */,
+				2DEDCD9929464FC0AB6F9F51 /* Pods-ios.xcconfig */,
+				E9E39539651F42948C488502 /* Pods-osx.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +122,8 @@
 				3D41AA1916C671390018B6C4 /* Cocoa.framework */,
 				3D41AA3316C672460018B6C4 /* Foundation.framework */,
 				3D41AA1B16C671390018B6C4 /* Other Frameworks */,
+				BF99A7F421914D969A9BF2ED /* libPods-ios.a */,
+				795C0255596343E2AE9ED337 /* libPods-osx.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -102,6 +142,18 @@
 			isa = PBXGroup;
 			children = (
 				3D41AA2616C671390018B6C4 /* AYNetworking.h */,
+				3D50DC0616C67929009D224D /* AFHTTPClient+AYRequestMethod.h */,
+				3D50DC0716C67929009D224D /* AFHTTPClient+AYRequestMethod.m */,
+				3D50DC0816C67929009D224D /* AFHTTPClient+AYRequestMethodGET.h */,
+				3D50DC0916C67929009D224D /* AFHTTPClient+AYRequestMethodGET.m */,
+				3DDE356016C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPOST.h */,
+				3DDE356116C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPOST.m */,
+				3DDE355C16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodDELETE.h */,
+				3DDE355D16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodDELETE.m */,
+				3DDE355E16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPATCH.h */,
+				3DDE355F16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPATCH.m */,
+				3DDE356216C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPUT.h */,
+				3DDE356316C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPUT.m */,
 				3D41AA2016C671390018B6C4 /* Supporting Files */,
 			);
 			path = AYNetworking;
@@ -125,6 +177,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D2378AE16C676410005D559 /* AYNetworking.h in Headers */,
+				3D50DC0B16C67929009D224D /* AFHTTPClient+AYRequestMethod.h in Headers */,
+				3D50DC0F16C67929009D224D /* AFHTTPClient+AYRequestMethodGET.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +187,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D2378AB16C6757C0005D559 /* AYNetworking.h in Headers */,
+				3D50DC0A16C67929009D224D /* AFHTTPClient+AYRequestMethod.h in Headers */,
+				3D50DC0E16C67929009D224D /* AFHTTPClient+AYRequestMethodGET.h in Headers */,
+				3DDE356416C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodDELETE.h in Headers */,
+				3DDE356616C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPATCH.h in Headers */,
+				3DDE356816C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPOST.h in Headers */,
+				3DDE356A16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPUT.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +207,7 @@
 				3D41AA1216C671390018B6C4 /* Frameworks */,
 				3D41AA1316C671390018B6C4 /* Headers */,
 				3D41AA1416C671390018B6C4 /* Resources */,
+				64216EC275A14A6FB02CEEDB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,6 +226,7 @@
 				3D41AA2F16C672460018B6C4 /* Frameworks */,
 				3D2378AD16C6761B0005D559 /* Headers */,
 				3D41AA3016C672460018B6C4 /* CopyFiles */,
+				45D2F6EA858B41AA98583C45 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,7 +244,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0450;
-				ORGANIZATIONNAME = "Jan Böhler";
+				ORGANIZATIONNAME = "Jan B√∂hler";
 			};
 			buildConfigurationList = 3D41AA0F16C671390018B6C4 /* Build configuration list for PBXProject "AYNetworking" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -213,11 +275,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		45D2F6EA858B41AA98583C45 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ios-resources.sh\"\n";
+		};
+		64216EC275A14A6FB02CEEDB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-osx-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3D41AA1116C671390018B6C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D50DC0C16C67929009D224D /* AFHTTPClient+AYRequestMethod.m in Sources */,
+				3D50DC1016C67929009D224D /* AFHTTPClient+AYRequestMethodGET.m in Sources */,
+				3DDE356516C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodDELETE.m in Sources */,
+				3DDE356716C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPATCH.m in Sources */,
+				3DDE356916C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPOST.m in Sources */,
+				3DDE356B16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPUT.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +324,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D50DC0D16C67929009D224D /* AFHTTPClient+AYRequestMethod.m in Sources */,
+				3D50DC1116C67929009D224D /* AFHTTPClient+AYRequestMethodGET.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +398,7 @@
 		};
 		3D41AA2C16C671390018B6C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9E39539651F42948C488502 /* Pods-osx.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -312,6 +414,7 @@
 		};
 		3D41AA2D16C671390018B6C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9E39539651F42948C488502 /* Pods-osx.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -327,6 +430,7 @@
 		};
 		3D41AA3D16C672460018B6C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DEDCD9929464FC0AB6F9F51 /* Pods-ios.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/AYNetworking.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -341,6 +445,7 @@
 		};
 		3D41AA3E16C672460018B6C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DEDCD9929464FC0AB6F9F51 /* Pods-ios.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/AYNetworking.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
