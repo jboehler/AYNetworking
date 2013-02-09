@@ -7,10 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2378AB16C6757C0005D559 /* AYNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D41AA2616C671390018B6C4 /* AYNetworking.h */; };
+		3D2378AE16C676410005D559 /* AYNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D41AA2616C671390018B6C4 /* AYNetworking.h */; };
 		3D41AA1A16C671390018B6C4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D41AA1916C671390018B6C4 /* Cocoa.framework */; };
 		3D41AA2416C671390018B6C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D41AA2216C671390018B6C4 /* InfoPlist.strings */; };
-		3D41AA2816C671390018B6C4 /* AYNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D41AA2716C671390018B6C4 /* AYNetworking.m */; };
+		3D41AA3416C672460018B6C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D41AA3316C672460018B6C4 /* Foundation.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3D41AA3016C672460018B6C4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3D41AA1616C671390018B6C4 /* AYNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AYNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,7 +36,8 @@
 		3D41AA2316C671390018B6C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3D41AA2516C671390018B6C4 /* AYNetworking-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AYNetworking-Prefix.pch"; sourceTree = "<group>"; };
 		3D41AA2616C671390018B6C4 /* AYNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYNetworking.h; sourceTree = "<group>"; };
-		3D41AA2716C671390018B6C4 /* AYNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYNetworking.m; sourceTree = "<group>"; };
+		3D41AA3216C672460018B6C4 /* libAYNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAYNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D41AA3316C672460018B6C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +46,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D41AA1A16C671390018B6C4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D41AA2F16C672460018B6C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D41AA3416C672460018B6C4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				3D41AA1616C671390018B6C4 /* AYNetworking.framework */,
+				3D41AA3216C672460018B6C4 /* libAYNetworking.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				3D41AA1916C671390018B6C4 /* Cocoa.framework */,
+				3D41AA3316C672460018B6C4 /* Foundation.framework */,
 				3D41AA1B16C671390018B6C4 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -77,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				3D41AA2616C671390018B6C4 /* AYNetworking.h */,
-				3D41AA2716C671390018B6C4 /* AYNetworking.m */,
 				3D41AA2016C671390018B6C4 /* Supporting Files */,
 			);
 			path = AYNetworking;
@@ -96,10 +120,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		3D2378AD16C6761B0005D559 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D2378AE16C676410005D559 /* AYNetworking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3D41AA1316C671390018B6C4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2378AB16C6757C0005D559 /* AYNetworking.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +157,24 @@
 			productReference = 3D41AA1616C671390018B6C4 /* AYNetworking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		3D41AA3116C672460018B6C4 /* libAYNetworking.a */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D41AA3C16C672460018B6C4 /* Build configuration list for PBXNativeTarget "libAYNetworking.a" */;
+			buildPhases = (
+				3D41AA2E16C672460018B6C4 /* Sources */,
+				3D41AA2F16C672460018B6C4 /* Frameworks */,
+				3D2378AD16C6761B0005D559 /* Headers */,
+				3D41AA3016C672460018B6C4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libAYNetworking.a;
+			productName = AYNetworking;
+			productReference = 3D41AA3216C672460018B6C4 /* libAYNetworking.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -146,6 +197,7 @@
 			projectRoot = "";
 			targets = (
 				3D41AA1516C671390018B6C4 /* AYNetworking.framework */,
+				3D41AA3116C672460018B6C4 /* libAYNetworking.a */,
 			);
 		};
 /* End PBXProject section */
@@ -166,7 +218,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D41AA2816C671390018B6C4 /* AYNetworking.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D41AA2E16C672460018B6C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +325,35 @@
 			};
 			name = Release;
 		};
+		3D41AA3D16C672460018B6C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/AYNetworking.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AYNetworking/AYNetworking-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = AYNetworking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3D41AA3E16C672460018B6C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/AYNetworking.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AYNetworking/AYNetworking-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = AYNetworking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -286,6 +373,16 @@
 				3D41AA2D16C671390018B6C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D41AA3C16C672460018B6C4 /* Build configuration list for PBXNativeTarget "libAYNetworking.a" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D41AA3D16C672460018B6C4 /* Debug */,
+				3D41AA3E16C672460018B6C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

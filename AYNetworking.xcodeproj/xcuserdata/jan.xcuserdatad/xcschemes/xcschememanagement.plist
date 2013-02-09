@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>libAYNetworking.a.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>3D41AA1516C671390018B6C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3D41AA3116C672460018B6C4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
