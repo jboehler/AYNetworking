@@ -106,9 +106,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3D41AA1516C671390018B6C4 /* AYNetworking */ = {
+		3D41AA1516C671390018B6C4 /* AYNetworking.framework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D41AA2B16C671390018B6C4 /* Build configuration list for PBXNativeTarget "AYNetworking" */;
+			buildConfigurationList = 3D41AA2B16C671390018B6C4 /* Build configuration list for PBXNativeTarget "AYNetworking.framework" */;
 			buildPhases = (
 				3D41AA1116C671390018B6C4 /* Sources */,
 				3D41AA1216C671390018B6C4 /* Frameworks */,
@@ -119,7 +119,7 @@
 			);
 			dependencies = (
 			);
-			name = AYNetworking;
+			name = AYNetworking.framework;
 			productName = AYNetworking;
 			productReference = 3D41AA1616C671390018B6C4 /* AYNetworking.framework */;
 			productType = "com.apple.product-type.framework";
@@ -145,7 +145,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3D41AA1516C671390018B6C4 /* AYNetworking */,
+				3D41AA1516C671390018B6C4 /* AYNetworking.framework */,
 			);
 		};
 /* End PBXProject section */
@@ -247,7 +247,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AYNetworking/AYNetworking-Prefix.pch";
 				INFOPLIST_FILE = "AYNetworking/AYNetworking-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AYNetworking;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -262,7 +262,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AYNetworking/AYNetworking-Prefix.pch";
 				INFOPLIST_FILE = "AYNetworking/AYNetworking-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AYNetworking;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -279,7 +279,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D41AA2B16C671390018B6C4 /* Build configuration list for PBXNativeTarget "AYNetworking" */ = {
+		3D41AA2B16C671390018B6C4 /* Build configuration list for PBXNativeTarget "AYNetworking.framework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D41AA2C16C671390018B6C4 /* Debug */,
