@@ -18,7 +18,7 @@ To send a request you can just use the code below. No start or similar needed!
 
 The same for post, delete, patch and put.
 
-If you want modify the AFHTTPRequestOperation before it start the operation to send the request you can use the code below.
+If you want modify the AFHTTPRequestOperation before the operation start to send the request you can use the code below.
 	
     [self.client willStartRequestOperation:^(AFHTTPRequestOperation *operation) {
         // modify the AFHTTPRequestOperation…
