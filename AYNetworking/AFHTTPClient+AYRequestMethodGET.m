@@ -13,35 +13,55 @@
 #pragma mark -
 #pragma mark Delegate API
 
+- (AFHTTPRequestOperation *)get:(NSString *)resource delegate:(id<AYHTTPRequestOperationDelegate>)delegate
+{
+    return [self get:resource parameters:nil headers:nil delegate:delegate];
+}
+
+- (AFHTTPRequestOperation *)get:(NSString *)resource parameters:(NSDictionary *)parameters delegate:(id<AYHTTPRequestOperationDelegate>)delegate
+{
+    return [self get:resource parameters:parameters headers:nil delegate:delegate];
+}
+
+- (AFHTTPRequestOperation *)get:(NSString *)resource headers:(NSDictionary *)headers delegate:(id<AYHTTPRequestOperationDelegate>)delegate
+{
+    return [self get:resource parameters:nil headers:headers delegate:delegate];
+}
+
+- (AFHTTPRequestOperation *)get:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers delegate:(id<AYHTTPRequestOperationDelegate>)delegate
+{
+    return [self requestWithMethod:@"GET" resource:resource parameters:parameters headers:headers delegate:delegate];
+}
+
 #pragma mark -
 #pragma mark Blocks API
 
-- (void)get:(NSString *)resource
+- (AFHTTPRequestOperation *)get:(NSString *)resource
             success:(void (^)(AFHTTPRequestOperation *, id))success
             failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure
 {
-    [self get:resource parameters:nil headers:nil success:success failure:failure];
+    return [self get:resource parameters:nil headers:nil success:success failure:failure];
 }
 
-- (void)get:(NSString *)resource parameters:(NSDictionary *)parameters
+- (AFHTTPRequestOperation *)get:(NSString *)resource parameters:(NSDictionary *)parameters
             success:(void (^)(AFHTTPRequestOperation *, id))success
             failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure
 {
-    [self get:resource parameters:parameters headers:nil success:success failure:failure];
+    return [self get:resource parameters:parameters headers:nil success:success failure:failure];
 }
 
-- (void)get:(NSString *)resource headers:(NSDictionary *)headers
+- (AFHTTPRequestOperation *)get:(NSString *)resource headers:(NSDictionary *)headers
     success:(void (^)(AFHTTPRequestOperation *, id))success
     failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure
 {
-    [self get:resource parameters:nil headers:headers success:success failure:failure];
+    return [self get:resource parameters:nil headers:headers success:success failure:failure];
 }
 
-- (void)get:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers
+- (AFHTTPRequestOperation *)get:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers
             success:(void (^)(AFHTTPRequestOperation *, id))success
             failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure
 {
-    [self requestWithMethod:@"GET" resource:resource parameters:parameters headers:headers success:success failure:failure];
+    return [self requestWithMethod:@"GET" resource:resource parameters:parameters headers:headers success:success failure:failure];
 }
 
 #pragma mark -

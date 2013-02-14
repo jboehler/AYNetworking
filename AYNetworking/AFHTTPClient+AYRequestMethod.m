@@ -13,8 +13,8 @@ static void *AFHTTPClientRequestOperationBlockAssociatedObjectKey;
 static void *AFHTTPClientRequestBlockAssociatedObjectKey;
 
 @interface AFHTTPClient (hidden)
-@property (nonatomic, copy) void(^startRequestOperationBlock) (AFHTTPRequestOperation *);
-@property (nonatomic, copy) void(^startRequestBlock) (NSMutableURLRequest *);
+@property (strong) void(^startRequestOperationBlock) (AFHTTPRequestOperation *);
+@property (strong) void(^startRequestBlock) (NSMutableURLRequest *);
 @end
 
 @implementation AFHTTPClient (hidden)
@@ -24,7 +24,7 @@ static void *AFHTTPClientRequestBlockAssociatedObjectKey;
 
 - (void)setStartRequestOperationBlock:(void (^)(AFHTTPRequestOperation *))startRequestOperationBlock
 {
-    objc_setAssociatedObject(self, &AFHTTPClientRequestOperationBlockAssociatedObjectKey, startRequestOperationBlock, OBJC_ASSOCIATION_COPY);
+    objc_setAssociatedObject(self, &AFHTTPClientRequestOperationBlockAssociatedObjectKey, startRequestOperationBlock, OBJC_ASSOCIATION_RETAIN);
 }
 
 - (void (^)(AFHTTPRequestOperation *))startRequestOperationBlock
@@ -34,7 +34,7 @@ static void *AFHTTPClientRequestBlockAssociatedObjectKey;
 
 -(void)setStartRequestBlock:(void (^)(NSMutableURLRequest *))startRequestBlock
 {
-    objc_setAssociatedObject(self, &AFHTTPClientRequestBlockAssociatedObjectKey, startRequestBlock, OBJC_ASSOCIATION_COPY);
+    objc_setAssociatedObject(self, &AFHTTPClientRequestBlockAssociatedObjectKey, startRequestBlock, OBJC_ASSOCIATION_RETAIN);
 }
 
 - (void (^)(NSMutableURLRequest *))startRequestBlock
@@ -44,11 +44,25 @@ static void *AFHTTPClientRequestBlockAssociatedObjectKey;
 
 @end
 
+static void *AFHTTPClientDelegateAssociatedObjectKey;
+
 @implementation AFHTTPClient (AYRequestMethod)
 
-- (void)requestWithMethod:(NSString *)method resource:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers
-                  success:(void (^)(AFHTTPRequestOperation *, id))success
-                  failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure
+@dynamic delegate;
+
+- (void)setDelegate:(id<AYHTTPClientDelegate>)delegate
+{
+    objc_setAssociatedObject(self, &AFHTTPClientDelegateAssociatedObjectKey, delegate, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (id<AYHTTPClientDelegate>)delegate
+{
+    return (id<AYHTTPClientDelegate>)objc_getAssociatedObject(self, &AFHTTPClientDelegateAssociatedObjectKey);
+}
+
+- (AFHTTPRequestOperation *)requestWithMethod:(NSString *)method resource:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers
+                                      success:(void (^)(AFHTTPRequestOperation *, id))success
+                                      failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure
 {
     NSMutableURLRequest *request = [self requestWithMethod:method path:resource parameters:parameters];
     
@@ -58,28 +72,45 @@ static void *AFHTTPClientRequestBlockAssociatedObjectKey;
         self.startRequestBlock(request);
     }
     
+    if ([self.delegate respondsToSelector:@selector(client:willStartWithRequest:)]) {
+        [self.delegate client:self willStartWithRequest:request];
+    }
+    
     AFHTTPRequestOperation *requestOperation = [self HTTPRequestOperationWithRequest:request success:success failure:failure];
     
     if (self.startRequestOperationBlock) {
         self.startRequestOperationBlock(requestOperation);
     }
     
+    if ([self.delegate respondsToSelector:@selector(client:willStartRequestOperation:)]) {
+        [self.delegate client:self willStartRequestOperation:requestOperation];
+    }
+    
     [requestOperation start];
+    
+    return requestOperation;
 }
 
-- (void)willStartRequestOperation:(void (^)(AFHTTPRequestOperation *))block
+- (AFHTTPRequestOperation *)requestWithMethod:(NSString *)method resource:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers delegate:(id<AYHTTPRequestOperationDelegate>)delegate
 {
-    
-    self.startRequestOperationBlock = block;
+    return [self requestWithMethod:method resource:resource parameters:parameters headers:headers
+                           success:^(AFHTTPRequestOperation *operation, id response) {
+                               [delegate client:self requestOperation:operation didSuccessfulWithObject:response];
+                           }
+                           failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                               [delegate client:self requestOperation:operation didFailWithError:error];
+                           }
+            ];
 }
 
 - (void)willStartRequest:(void (^)(NSMutableURLRequest *))block
 {
-    
     self.startRequestBlock = block;
 }
 
-
-
+- (void)willStartRequestOperation:(void (^)(AFHTTPRequestOperation *))block
+{
+    self.startRequestOperationBlock = block;
+}
 
 @end
