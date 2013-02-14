@@ -14,35 +14,55 @@
 #pragma mark -
 #pragma mark Delegate API
 
+- (AFHTTPRequestOperation *)delete:(NSString *)resource delegate:(id<AYHTTPRequestOperationDelegate>)delegate
+{
+    return [self delete:resource parameters:nil headers:nil delegate:delegate];
+}
+
+- (AFHTTPRequestOperation *)delete:(NSString *)resource parameters:(NSDictionary *)parameters delegate:(id<AYHTTPRequestOperationDelegate>)delegate
+{
+    return [self delete:resource parameters:parameters headers:nil delegate:delegate];
+}
+
+- (AFHTTPRequestOperation *)delete:(NSString *)resource headers:(NSDictionary *)headers delegate:(id<AYHTTPRequestOperationDelegate>)delegate
+{
+    return [self delete:resource parameters:nil headers:headers delegate:delegate];
+}
+
+- (AFHTTPRequestOperation *)delete:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers delegate:(id<AYHTTPRequestOperationDelegate>)delegate
+{
+    return [self requestWithMethod:@"DELETE" resource:resource parameters:parameters headers:headers delegate:delegate];
+}
+
 #pragma mark -
 #pragma mark Blocks API
 
-- (void)delete:(NSString *)resource
+- (AFHTTPRequestOperation *)delete:(NSString *)resource
      success:(void (^)(AFHTTPRequestOperation *, id))success
      failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure
 {
-    [self delete:resource parameters:nil headers:nil success:success failure:failure];
+    return [self delete:resource parameters:nil headers:nil success:success failure:failure];
 }
 
-- (void)delete:(NSString *)resource parameters:(NSDictionary *)parameters
+- (AFHTTPRequestOperation *)delete:(NSString *)resource parameters:(NSDictionary *)parameters
      success:(void (^)(AFHTTPRequestOperation *, id))success
      failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure
 {
-    [self delete:resource parameters:parameters headers:nil success:success failure:failure];
+    return [self delete:resource parameters:parameters headers:nil success:success failure:failure];
 }
 
-- (void)delete:(NSString *)resource headers:(NSDictionary *)headers
+- (AFHTTPRequestOperation *)delete:(NSString *)resource headers:(NSDictionary *)headers
      success:(void (^)(AFHTTPRequestOperation *, id))success
      failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure
 {
-    [self delete:resource parameters:nil headers:headers success:success failure:failure];
+    return [self delete:resource parameters:nil headers:headers success:success failure:failure];
 }
 
-- (void)delete:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers
+- (AFHTTPRequestOperation *)delete:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers
      success:(void (^)(AFHTTPRequestOperation *, id))success
      failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure
 {
-    [self requestWithMethod:@"DELETE" resource:resource parameters:parameters headers:headers success:success failure:failure];
+    return [self requestWithMethod:@"DELETE" resource:resource parameters:parameters headers:headers success:success failure:failure];
 }
 
 #pragma mark -

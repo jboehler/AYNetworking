@@ -10,31 +10,48 @@
 
 @interface AFHTTPClient (AYRequestMethodPATCH)
 
-// TODO: Delagete API
+// Delagete API
+
+/**
+ */
+- (AFHTTPRequestOperation *)patch:(NSString *)resource delegate:(id<AYHTTPRequestOperationDelegate>)delegate;
+
+/**
+ */
+- (AFHTTPRequestOperation *)patch:(NSString *)resource parameters:(NSDictionary *)parameters delegate:(id<AYHTTPRequestOperationDelegate>)delegate;
+
+/**
+ */
+- (AFHTTPRequestOperation *)patch:(NSString *)resource headers:(NSDictionary *)headers delegate:(id<AYHTTPRequestOperationDelegate>)delegate;
+
+/**
+ */
+- (AFHTTPRequestOperation *)patch:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers delegate:(id<AYHTTPRequestOperationDelegate>)delegate;
+
 
 // Block API
 
 /**
  */
-- (void)patch:(NSString *)resource
+- (AFHTTPRequestOperation *)patch:(NSString *)resource
      success:(void (^)(AFHTTPRequestOperation *operation, id response))success
      failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 /**
  */
-- (void)patch:(NSString *)resource parameters:(NSDictionary *)parameters
+- (AFHTTPRequestOperation *)patch:(NSString *)resource parameters:(NSDictionary *)parameters
      success:(void (^)(AFHTTPRequestOperation *operation, id response))success
      failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 /**
  */
-- (void)patch:(NSString *)resource headers:(NSDictionary *)headers
+- (AFHTTPRequestOperation *)patch:(NSString *)resource headers:(NSDictionary *)headers
      success:(void (^)(AFHTTPRequestOperation *operation, id response))success
      failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 /**
  */
-- (void)patch:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers
+- (AFHTTPRequestOperation *)patch:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers
      success:(void (^)(AFHTTPRequestOperation *operation, id response))success
      failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 

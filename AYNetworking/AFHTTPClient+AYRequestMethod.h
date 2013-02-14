@@ -7,14 +7,23 @@
 //
 
 #import <AYNetworking.h>
+#import "AYHTTPRequestOperationDelegate.h"
+#import "AYHTTPClientDelegate.h"
 
 @interface AFHTTPClient (AYRequestMethod)
 
+
+@property (strong) id<AYHTTPClientDelegate> delegate;
+
 /**
  */
-- (void)requestWithMethod:(NSString *)method resource:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers
-                  success:(void (^)(AFHTTPRequestOperation *, id))success
-                  failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure;
+- (AFHTTPRequestOperation *)requestWithMethod:(NSString *)method resource:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers
+                                      success:(void (^)(AFHTTPRequestOperation *, id))success
+                                      failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure;
+
+/**
+ */
+- (AFHTTPRequestOperation *)requestWithMethod:(NSString *)method resource:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers delegate:(id<AYHTTPRequestOperationDelegate>)delegate;
 
 /**
  */

@@ -8,6 +8,9 @@
 
 #import <AFNetworking/AFNetworking.h>
 
+#import "AYHTTPClientDelegate.h"
+#import "AYHTTPRequestOperationDelegate.h"
+
 #import "AFHTTPClient+AYRequestMethod.h"
 #import "AFHTTPClient+AYRequestMethodGET.h"
 #import "AFHTTPClient+AYRequestMethodPOST.h"

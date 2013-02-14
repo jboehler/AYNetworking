@@ -14,35 +14,55 @@
 #pragma mark -
 #pragma mark Delegate API
 
+- (AFHTTPRequestOperation *)put:(NSString *)resource delegate:(id<AYHTTPRequestOperationDelegate>)delegate
+{
+    return [self put:resource parameters:nil headers:nil delegate:delegate];
+}
+
+- (AFHTTPRequestOperation *)put:(NSString *)resource parameters:(NSDictionary *)parameters delegate:(id<AYHTTPRequestOperationDelegate>)delegate
+{
+    return [self put:resource parameters:parameters headers:nil delegate:delegate];
+}
+
+- (AFHTTPRequestOperation *)put:(NSString *)resource headers:(NSDictionary *)headers delegate:(id<AYHTTPRequestOperationDelegate>)delegate
+{
+    return [self put:resource parameters:nil headers:headers delegate:delegate];
+}
+
+- (AFHTTPRequestOperation *)put:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers delegate:(id<AYHTTPRequestOperationDelegate>)delegate
+{
+    return [self requestWithMethod:@"PUT" resource:resource parameters:parameters headers:headers delegate:delegate];
+}
+
 #pragma mark -
 #pragma mark Blocks API
 
-- (void)put:(NSString *)resource
+- (AFHTTPRequestOperation *)put:(NSString *)resource
      success:(void (^)(AFHTTPRequestOperation *, id))success
      failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure
 {
-    [self put:resource parameters:nil headers:nil success:success failure:failure];
+    return [self put:resource parameters:nil headers:nil success:success failure:failure];
 }
 
-- (void)put:(NSString *)resource parameters:(NSDictionary *)parameters
+- (AFHTTPRequestOperation *)put:(NSString *)resource parameters:(NSDictionary *)parameters
      success:(void (^)(AFHTTPRequestOperation *, id))success
      failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure
 {
-    [self put:resource parameters:parameters headers:nil success:success failure:failure];
+    return [self put:resource parameters:parameters headers:nil success:success failure:failure];
 }
 
-- (void)put:(NSString *)resource headers:(NSDictionary *)headers
+- (AFHTTPRequestOperation *)put:(NSString *)resource headers:(NSDictionary *)headers
      success:(void (^)(AFHTTPRequestOperation *, id))success
      failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure
 {
-    [self put:resource parameters:nil headers:headers success:success failure:failure];
+    return [self put:resource parameters:nil headers:headers success:success failure:failure];
 }
 
-- (void)put:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers
+- (AFHTTPRequestOperation *)put:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers
      success:(void (^)(AFHTTPRequestOperation *, id))success
      failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure
 {
-    [self requestWithMethod:@"PUT" resource:resource parameters:parameters headers:headers success:success failure:failure];
+    return [self requestWithMethod:@"PUT" resource:resource parameters:parameters headers:headers success:success failure:failure];
 }
 
 #pragma mark -

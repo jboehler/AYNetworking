@@ -10,31 +10,48 @@
 
 @interface AFHTTPClient (AYRequestMethodPOST)
 
-// TODO: Delagete API
+// Delagete API
+
+/**
+ */
+- (AFHTTPRequestOperation *)post:(NSString *)resource delegate:(id<AYHTTPRequestOperationDelegate>)delegate;
+
+/**
+ */
+- (AFHTTPRequestOperation *)post:(NSString *)resource parameters:(NSDictionary *)parameters delegate:(id<AYHTTPRequestOperationDelegate>)delegate;
+
+/**
+ */
+- (AFHTTPRequestOperation *)post:(NSString *)resource headers:(NSDictionary *)headers delegate:(id<AYHTTPRequestOperationDelegate>)delegate;
+
+/**
+ */
+- (AFHTTPRequestOperation *)post:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers delegate:(id<AYHTTPRequestOperationDelegate>)delegate;
+
 
 // Block API
 
 /**
  */
-- (void)post:(NSString *)resource
+- (AFHTTPRequestOperation *)post:(NSString *)resource
     success:(void (^)(AFHTTPRequestOperation *operation, id response))success
     failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 /**
  */
-- (void)post:(NSString *)resource parameters:(NSDictionary *)parameters
+- (AFHTTPRequestOperation *)post:(NSString *)resource parameters:(NSDictionary *)parameters
     success:(void (^)(AFHTTPRequestOperation *operation, id response))success
     failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 /**
  */
-- (void)post:(NSString *)resource headers:(NSDictionary *)headers
+- (AFHTTPRequestOperation *)post:(NSString *)resource headers:(NSDictionary *)headers
     success:(void (^)(AFHTTPRequestOperation *operation, id response))success
     failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 /**
  */
-- (void)post:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers
+- (AFHTTPRequestOperation *)post:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers
     success:(void (^)(AFHTTPRequestOperation *operation, id response))success
     failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
