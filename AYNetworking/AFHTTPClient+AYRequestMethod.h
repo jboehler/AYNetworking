@@ -16,7 +16,13 @@
                   success:(void (^)(AFHTTPRequestOperation *, id))success
                   failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure;
 
+/**
+ */
 - (void)willStartRequestOperation:(void(^)(AFHTTPRequestOperation *))operation;
+
+/**
+ */
+- (void)willStartRequest:(void(^)(NSMutableURLRequest *))request;
 
 
 @end
