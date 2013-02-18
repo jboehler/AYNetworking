@@ -11,6 +11,8 @@
 #import "AYHTTPClientDelegate.h"
 #import "AYHTTPRequestOperationDelegate.h"
 
+#import "AFURLConnectionOperation+AYURLConnectionOperation.h"
+
 #import "AFHTTPClient+AYRequestMethod.h"
 #import "AFHTTPClient+AYRequestMethodGET.h"
 #import "AFHTTPClient+AYRequestMethodPOST.h"

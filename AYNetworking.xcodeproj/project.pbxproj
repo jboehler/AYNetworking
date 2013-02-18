@@ -22,6 +22,10 @@
 		3D50DC1116C67929009D224D /* AFHTTPClient+AYRequestMethodGET.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D50DC0916C67929009D224D /* AFHTTPClient+AYRequestMethodGET.m */; };
 		3D558CCA16CF6B1F002BBF8C /* AYHTTPClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D558CC916CF6B1F002BBF8C /* AYHTTPClientDelegate.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3D558CCB16CF6B1F002BBF8C /* AYHTTPClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D558CC916CF6B1F002BBF8C /* AYHTTPClientDelegate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3DC5896516D923770052B3C4 /* AFURLConnectionOperation+AYURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC5896316D923770052B3C4 /* AFURLConnectionOperation+AYURLConnectionOperation.h */; };
+		3DC5896616D923770052B3C4 /* AFURLConnectionOperation+AYURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC5896316D923770052B3C4 /* AFURLConnectionOperation+AYURLConnectionOperation.h */; };
+		3DC5896716D923770052B3C4 /* AFURLConnectionOperation+AYURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5896416D923770052B3C4 /* AFURLConnectionOperation+AYURLConnectionOperation.m */; };
+		3DC5896816D923770052B3C4 /* AFURLConnectionOperation+AYURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5896416D923770052B3C4 /* AFURLConnectionOperation+AYURLConnectionOperation.m */; };
 		3DD3408316CD6F460044FF9E /* AYHTTPRequestOperationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD3408216CD6F460044FF9E /* AYHTTPRequestOperationDelegate.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3DD3408416CD6F460044FF9E /* AYHTTPRequestOperationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD3408216CD6F460044FF9E /* AYHTTPRequestOperationDelegate.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3DD3409216CD76400044FF9E /* AFHTTPClient+AYRequestMethodPOST.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDE356016C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPOST.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -74,6 +78,8 @@
 		3D50DC0816C67929009D224D /* AFHTTPClient+AYRequestMethodGET.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPClient+AYRequestMethodGET.h"; sourceTree = "<group>"; };
 		3D50DC0916C67929009D224D /* AFHTTPClient+AYRequestMethodGET.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPClient+AYRequestMethodGET.m"; sourceTree = "<group>"; };
 		3D558CC916CF6B1F002BBF8C /* AYHTTPClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYHTTPClientDelegate.h; sourceTree = "<group>"; };
+		3DC5896316D923770052B3C4 /* AFURLConnectionOperation+AYURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFURLConnectionOperation+AYURLConnectionOperation.h"; sourceTree = "<group>"; };
+		3DC5896416D923770052B3C4 /* AFURLConnectionOperation+AYURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFURLConnectionOperation+AYURLConnectionOperation.m"; sourceTree = "<group>"; };
 		3DD3408216CD6F460044FF9E /* AYHTTPRequestOperationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYHTTPRequestOperationDelegate.h; sourceTree = "<group>"; };
 		3DDE355C16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodDELETE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPClient+AYRequestMethodDELETE.h"; sourceTree = "<group>"; };
 		3DDE355D16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodDELETE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPClient+AYRequestMethodDELETE.m"; sourceTree = "<group>"; };
@@ -170,6 +176,8 @@
 				3DDE355F16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPATCH.m */,
 				3DDE356216C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPUT.h */,
 				3DDE356316C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPUT.m */,
+				3DC5896316D923770052B3C4 /* AFURLConnectionOperation+AYURLConnectionOperation.h */,
+				3DC5896416D923770052B3C4 /* AFURLConnectionOperation+AYURLConnectionOperation.m */,
 				3D41AA2016C671390018B6C4 /* Supporting Files */,
 			);
 			path = AYNetworking;
@@ -201,6 +209,7 @@
 				3DD3409716CD76530044FF9E /* AFHTTPClient+AYRequestMethodPATCH.h in Headers */,
 				3DD3409816CD76560044FF9E /* AFHTTPClient+AYRequestMethodPUT.h in Headers */,
 				3D558CCB16CF6B1F002BBF8C /* AYHTTPClientDelegate.h in Headers */,
+				3DC5896616D923770052B3C4 /* AFURLConnectionOperation+AYURLConnectionOperation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +226,7 @@
 				3DDE356A16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPUT.h in Headers */,
 				3DD3408316CD6F460044FF9E /* AYHTTPRequestOperationDelegate.h in Headers */,
 				3D558CCA16CF6B1F002BBF8C /* AYHTTPClientDelegate.h in Headers */,
+				3DC5896516D923770052B3C4 /* AFURLConnectionOperation+AYURLConnectionOperation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +351,7 @@
 				3DDE356716C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPATCH.m in Sources */,
 				3DDE356916C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPOST.m in Sources */,
 				3DDE356B16C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPUT.m in Sources */,
+				3DC5896716D923770052B3C4 /* AFURLConnectionOperation+AYURLConnectionOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +365,7 @@
 				3DD3409516CD764C0044FF9E /* AFHTTPClient+AYRequestMethodDELETE.m in Sources */,
 				3DD3409616CD76500044FF9E /* AFHTTPClient+AYRequestMethodPATCH.m in Sources */,
 				3DD3409916CD765A0044FF9E /* AFHTTPClient+AYRequestMethodPUT.m in Sources */,
+				3DC5896816D923770052B3C4 /* AFURLConnectionOperation+AYURLConnectionOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

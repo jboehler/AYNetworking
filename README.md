@@ -2,7 +2,9 @@
 
 AYNetworking is a set of category with API methods to make it easier to handle requests and response with [AFNetworking](https://github.com/AFNetworking/AFNetworking) Framework.
 
-Inspirited be [LRResty](https://github.com/lukeredpath/LRResty)
+AYNetworking extent AFHTTPClient and AFHTTPRequestOperation API of the [AFNetworking](https://github.com/AFNetworking/AFNetworking) Framework.
+
+Inspirited by [LRResty](https://github.com/lukeredpath/LRResty)
 
 ## Block API ##
 
@@ -41,7 +43,7 @@ If you want modify the AFHTTPRequestOperation before the operation start to send
 
 To send a request with delegate you can just use the code below.
 
-    [self.client get:@"contact" parameters:nil headers:nil delegate:self];
+    [client get:@"contact" parameters:nil headers:nil delegate:self];
 
 The delegate protocol methods to handle the response.
 
@@ -55,9 +57,22 @@ The delegate protocol methods to handle the response.
          // handle the error...
     }
 
+## Synchronous API ##
+
+    AFHTTPRequestOperation *operation = [client get:@"contact"];
+    
+    if (operation.isFailure) {
+        // handle the response...
+        // operation.responseData;
+    }
+    if (operation.isSuccess){
+        // handle the error...
+        // operation.error;
+    }
+
 ## Issues ##
 
 ✓ Block API  
 ✓ Delegate API  
-✗ Synchronous API  
+✗ Synchronous API  (TODO: operation.responseObject)  
 ✗ Documentation

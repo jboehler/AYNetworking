@@ -68,4 +68,30 @@
 #pragma mark -
 #pragma mark Synchronous API
 
+- (AFHTTPRequestOperation *)put:(NSString *)resource
+{
+    return [self put:resource parameters:nil headers:nil];
+}
+
+/**
+ */
+- (AFHTTPRequestOperation *)put:(NSString *)resource parameters:(NSDictionary *)parameters
+{
+    return [self put:resource parameters:parameters headers:nil];
+}
+
+/**
+ */
+- (AFHTTPRequestOperation *)put:(NSString *)resource headers:(NSDictionary *)headers
+{
+    return [self put:resource parameters:nil headers:headers];
+}
+
+/**
+ */
+- (AFHTTPRequestOperation *)put:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers
+{
+    return [self requestWithMethod:@"PUT" resource:resource parameters:parameters headers:headers];
+}
+
 @end

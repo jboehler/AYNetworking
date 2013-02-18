@@ -137,7 +137,7 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
 @synthesize runLoopModes = _runLoopModes;
 @synthesize request = _request;
 @synthesize response = _response;
-@synthesize error = _error;
+
 @synthesize responseData = _responseData;
 @synthesize responseString = _responseString;
 @synthesize responseStringEncoding = _responseStringEncoding;

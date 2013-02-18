@@ -68,4 +68,30 @@
 #pragma mark -
 #pragma mark Synchronous API
 
+- (AFHTTPRequestOperation *)post:(NSString *)resource
+{
+    return [self post:resource parameters:nil headers:nil];
+}
+
+/**
+ */
+- (AFHTTPRequestOperation *)post:(NSString *)resource parameters:(NSDictionary *)parameters
+{
+    return [self post:resource parameters:parameters headers:nil];
+}
+
+/**
+ */
+- (AFHTTPRequestOperation *)post:(NSString *)resource headers:(NSDictionary *)headers
+{
+    return [self post:resource parameters:nil headers:headers];
+}
+
+/**
+ */
+- (AFHTTPRequestOperation *)post:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers
+{
+    return [self requestWithMethod:@"POST" resource:resource parameters:parameters headers:headers];
+}
+
 @end

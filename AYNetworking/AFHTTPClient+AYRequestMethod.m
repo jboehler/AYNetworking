@@ -103,6 +103,23 @@ static void *AFHTTPClientDelegateAssociatedObjectKey;
             ];
 }
 
+- (AFHTTPRequestOperation *)requestWithMethod:(NSString *)method resource:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers;
+{
+    AFHTTPRequestOperation *operation;
+    
+    operation = [self requestWithMethod:method resource:resource parameters:parameters headers:headers
+                                success:^(AFHTTPRequestOperation *operation, id response) {
+                                    // TODO: (readonly) operation.responseObject is == id reponse
+                                    NSLog(@"%@ ?= %@", NSStringFromClass([operation.responseData class]), NSStringFromClass([response class]));
+                                }
+                                failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                    NSLog(@"%@ ?= %@", operation.error, error);
+                                }
+                 ];
+    [operation waitUntilFinished];
+    return operation;
+}
+
 - (void)willStartRequest:(void (^)(NSMutableURLRequest *))block
 {
     self.startRequestBlock = block;

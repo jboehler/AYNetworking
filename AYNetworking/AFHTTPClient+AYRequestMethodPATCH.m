@@ -68,4 +68,30 @@
 #pragma mark -
 #pragma mark Synchronous API
 
+- (AFHTTPRequestOperation *)patch:(NSString *)resource
+{
+    return [self patch:resource parameters:nil headers:nil];
+}
+
+/**
+ */
+- (AFHTTPRequestOperation *)patch:(NSString *)resource parameters:(NSDictionary *)parameters
+{
+    return [self patch:resource parameters:parameters headers:nil];
+}
+
+/**
+ */
+- (AFHTTPRequestOperation *)patch:(NSString *)resource headers:(NSDictionary *)headers
+{
+    return [self patch:resource parameters:nil headers:headers];
+}
+
+/**
+ */
+- (AFHTTPRequestOperation *)patch:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers
+{
+    return [self requestWithMethod:@"PATCH" resource:resource parameters:parameters headers:headers];
+}
+
 @end

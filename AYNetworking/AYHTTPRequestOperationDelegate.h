@@ -3,7 +3,7 @@
 //  AYNetworking
 //
 //  Created by Jan Boehler on 14.02.13.
-//  Copyright (c) 2013 Jan B√∂hler. All rights reserved.
+//  Copyright (c) 2013 Jan Böhler. All rights reserved.
 //
 
 @class AFHTTPClient;

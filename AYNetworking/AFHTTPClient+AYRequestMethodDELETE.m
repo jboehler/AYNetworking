@@ -68,4 +68,30 @@
 #pragma mark -
 #pragma mark Synchronous API
 
+- (AFHTTPRequestOperation *)delete:(NSString *)resource
+{
+    return [self delete:resource parameters:nil headers:nil];
+}
+
+/**
+ */
+- (AFHTTPRequestOperation *)delete:(NSString *)resource parameters:(NSDictionary *)parameters
+{
+    return [self delete:resource parameters:parameters headers:nil];
+}
+
+/**
+ */
+- (AFHTTPRequestOperation *)delete:(NSString *)resource headers:(NSDictionary *)headers
+{
+    return [self delete:resource parameters:nil headers:headers];
+}
+
+/**
+ */
+- (AFHTTPRequestOperation *)delete:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers
+{
+    return [self requestWithMethod:@"DELETE" resource:resource parameters:parameters headers:headers];
+}
+
 @end

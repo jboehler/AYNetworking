@@ -12,7 +12,6 @@
 
 @interface AFHTTPClient (AYRequestMethod)
 
-
 @property (strong) id<AYHTTPClientDelegate> delegate;
 
 /**
@@ -24,6 +23,10 @@
 /**
  */
 - (AFHTTPRequestOperation *)requestWithMethod:(NSString *)method resource:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers delegate:(id<AYHTTPRequestOperationDelegate>)delegate;
+
+/**
+ */
+- (AFHTTPRequestOperation *)requestWithMethod:(NSString *)method resource:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers;
 
 /**
  */

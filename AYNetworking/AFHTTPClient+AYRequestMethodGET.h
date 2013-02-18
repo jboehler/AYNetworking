@@ -55,6 +55,22 @@
             success:(void (^)(AFHTTPRequestOperation *operation, id response))success
             failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
-// TODO: Synchronous API
+// Synchronous API
+
+/**
+ */
+- (AFHTTPRequestOperation *)get:(NSString *)resource;
+
+/**
+ */
+- (AFHTTPRequestOperation *)get:(NSString *)resource parameters:(NSDictionary *)parameters;
+
+/**
+ */
+- (AFHTTPRequestOperation *)get:(NSString *)resource headers:(NSDictionary *)headers;
+
+/**
+ */
+- (AFHTTPRequestOperation *)get:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers;
 
 @end
