@@ -61,11 +61,12 @@ The delegate protocol methods to handle the response.
 
     AFHTTPRequestOperation *operation = [client get:@"contact"];
     
-    if (operation.isFailure) {
+    if (operation.isSuccess){
         // handle the response...
         // operation.responseData;
     }
-    if (operation.isSuccess){
+    
+    if (operation.isFailure) {
         // handle the error...
         // operation.error;
     }
