@@ -9,17 +9,6 @@ Inspirited by [LRResty](https://github.com/lukeredpath/LRResty)
 ## Block API ##
 
 To send a request with blocks you can just use the code below.
-	
-    [client get:@"contact" parameters:nil headers:nil
-             success:^(AFHTTPRequestOperation *operation, id response) {
-                 // handle the response...
-             }
-             failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                 // handle the error...
-             }
-    ];
-
-or cleaner
 
     [client get:@"contact"
              success:^(AFHTTPRequestOperation *operation, id response) {
@@ -30,7 +19,19 @@ or cleaner
              }
     ];
 
-The same for post, delete, patch and put.
+The same for:
+ **post**, **delete**, **patch** and **put**.
+
+if your request need parameters or headers you can call it like below:
+
+    [client get:@"contact" parameters:@{@"": @""} headers:@{@"": @""}
+             success:^(AFHTTPRequestOperation *operation, id response) {
+                 // handle the response...
+             }
+             failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                 // handle the error...
+             }
+    ];
 
 If you want modify the AFHTTPRequestOperation before the operation start to send the request you can use the code below.
 	
@@ -43,7 +44,7 @@ If you want modify the AFHTTPRequestOperation before the operation start to send
 
 To send a request with delegate you can just use the code below.
 
-    [client get:@"contact" parameters:nil headers:nil delegate:self];
+    [client get:@"contact" delegate:self];
 
 The delegate protocol methods to handle the response.
 
@@ -59,11 +60,13 @@ The delegate protocol methods to handle the response.
 
 ## Synchronous API ##
 
+synchronous send request and handle response looks like below.
+
     AFHTTPRequestOperation *operation = [client get:@"contact"];
     
     if (operation.isSuccess){
         // handle the response...
-        // operation.responseData;
+        // operation.responseObject;
     }
     
     if (operation.isFailure) {
@@ -75,5 +78,5 @@ The delegate protocol methods to handle the response.
 
 ✓ Block API  
 ✓ Delegate API  
-✗ Synchronous API  (TODO: operation.responseObject)  
+✓ Synchronous API  
 ✗ Documentation

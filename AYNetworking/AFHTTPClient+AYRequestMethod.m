@@ -7,24 +7,40 @@
 //
 
 #import "AFHTTPClient+AYRequestMethod.h"
+#import "AFJSONRequestOperation.h"
 #import <objc/runtime.h>
 
 static void *AFHTTPClientRequestOperationBlockAssociatedObjectKey;
 static void *AFHTTPClientRequestBlockAssociatedObjectKey;
+static void *AFHTTPClientAsyncBlockIsRunAssociatedObjectKey;
 
 @interface AFHTTPClient (hidden)
 @property (strong) void(^startRequestOperationBlock) (AFHTTPRequestOperation *);
 @property (strong) void(^startRequestBlock) (NSMutableURLRequest *);
+@property (assign) BOOL isAsyncRequestResponse;
 @end
 
 @implementation AFHTTPClient (hidden)
 
 @dynamic startRequestOperationBlock;
 @dynamic startRequestBlock;
+@dynamic isAsyncRequestResponse;
+
+- (void)setIsAsyncRequestResponse:(BOOL)isAsyncRequestResponse
+{
+    NSNumber *boolNumber = [NSNumber numberWithBool: isAsyncRequestResponse];
+    objc_setAssociatedObject(self, &AFHTTPClientAsyncBlockIsRunAssociatedObjectKey, boolNumber, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (BOOL)isAsyncRequestResponse
+{
+    NSNumber *boolNumber = (NSNumber *)objc_getAssociatedObject(self, &AFHTTPClientAsyncBlockIsRunAssociatedObjectKey);
+    return [boolNumber boolValue];
+}
 
 - (void)setStartRequestOperationBlock:(void (^)(AFHTTPRequestOperation *))startRequestOperationBlock
 {
-    objc_setAssociatedObject(self, &AFHTTPClientRequestOperationBlockAssociatedObjectKey, startRequestOperationBlock, OBJC_ASSOCIATION_RETAIN);
+    objc_setAssociatedObject(self, &AFHTTPClientRequestOperationBlockAssociatedObjectKey, startRequestOperationBlock, OBJC_ASSOCIATION_ASSIGN);
 }
 
 - (void (^)(AFHTTPRequestOperation *))startRequestOperationBlock
@@ -105,18 +121,30 @@ static void *AFHTTPClientDelegateAssociatedObjectKey;
 
 - (AFHTTPRequestOperation *)requestWithMethod:(NSString *)method resource:(NSString *)resource parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers;
 {
+    
     AFHTTPRequestOperation *operation;
     
     operation = [self requestWithMethod:method resource:resource parameters:parameters headers:headers
                                 success:^(AFHTTPRequestOperation *operation, id response) {
-                                    // TODO: (readonly) operation.responseObject is == id reponse
-                                    NSLog(@"%@ ?= %@", NSStringFromClass([operation.responseData class]), NSStringFromClass([response class]));
+                                    SEL setResponseObject = @selector(setResponseObject:);
+                                    if ([operation respondsToSelector:setResponseObject]) {
+                                        #pragma clang diagnostic push
+                                        #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+                                        [operation performSelector:setResponseObject withObject:response];
+                                        #pragma clang diagnostic pop
+                                    } // seems to send to self
+                                    self.isAsyncRequestResponse = YES;
                                 }
                                 failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                    NSLog(@"%@ ?= %@", operation.error, error);
+                                    self.isAsyncRequestResponse = YES;
                                 }
                  ];
     [operation waitUntilFinished];
+    
+    // wait until for the success or failure block is run!
+    while (!self.isAsyncRequestResponse) {
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+    }
     return operation;
 }
 

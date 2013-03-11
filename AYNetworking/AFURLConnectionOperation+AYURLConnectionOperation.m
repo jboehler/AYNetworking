@@ -7,11 +7,19 @@
 //
 
 #import "AFURLConnectionOperation+AYURLConnectionOperation.h"
+#import <objc/runtime.h>
+
+static void *AFURLConnectionOperationResponseObjectAssociatedObjectKey;
+
+@interface AFURLConnectionOperation (hidden)
+@property (readwrite, strong) id responseObject;
+@end
 
 @implementation AFURLConnectionOperation (AYURLConnectionOperation)
 
 @dynamic isSuccess;
 @dynamic isFailure;
+@dynamic responseObject;
 
 - (BOOL)isFailure
 {
@@ -27,6 +35,18 @@
         return self.isFailure ? NO : YES;
     }
     return nil;
+}
+
+
+
+- (void)setResponseObject:(id)responseObject
+{
+    objc_setAssociatedObject(self, &AFURLConnectionOperationResponseObjectAssociatedObjectKey, responseObject, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (id)responseObject
+{
+    return objc_getAssociatedObject(self, &AFURLConnectionOperationResponseObjectAssociatedObjectKey);
 }
 
 @end

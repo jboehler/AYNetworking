@@ -19,5 +19,9 @@
  */
 @property (readonly) BOOL isFailure;
 
+/**
+ return the repsonse object (set on AFHTTPRequestOperation subclass)
+ */
+@property (readonly, strong) id responseObject;
 
 @end
