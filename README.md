@@ -4,7 +4,7 @@ AYNetworking is a set of category with API methods to make it easier to handle r
 
 AYNetworking extent AFHTTPClient and AFHTTPRequestOperation API of the [AFNetworking](https://github.com/AFNetworking/AFNetworking) Framework.
 
-Inspirited by [LRResty](https://github.com/lukeredpath/LRResty)
+Inspired by [LRResty](https://github.com/lukeredpath/LRResty)
 
 ## Block API ##
 
