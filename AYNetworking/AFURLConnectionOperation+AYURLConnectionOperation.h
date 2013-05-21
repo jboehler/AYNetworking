@@ -12,13 +12,15 @@
 /**
  return nil if is not finished (isFinished)
  */
-@property (readonly) BOOL isSuccess;
+
+@property (readonly) BOOL isSuccess __attribute__((deprecated("use 'isSuccessful' instead!")));
+@property (readonly) BOOL isSuccessful;
 
 /**
  return nil if is not finished (isFinished)
  */
-@property (readonly) BOOL isFailure;
-
+@property (readonly) BOOL isFailure __attribute__((deprecated("use 'isFailed' instead!")));
+@property (readonly) BOOL isFailed;
 /**
  return the repsonse object (set on AFHTTPRequestOperation subclass)
  */

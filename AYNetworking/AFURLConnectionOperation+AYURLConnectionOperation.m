@@ -17,11 +17,11 @@ static void *AFURLConnectionOperationResponseObjectAssociatedObjectKey;
 
 @implementation AFURLConnectionOperation (AYURLConnectionOperation)
 
-@dynamic isSuccess;
-@dynamic isFailure;
+@dynamic isSuccess, isSuccessful;
+@dynamic isFailure, isFailed;
 @dynamic responseObject;
 
-- (BOOL)isFailure
+- (BOOL)isFailed
 {
     if (self.isFinished) {
         return self.error ? YES : NO;
@@ -29,15 +29,23 @@ static void *AFURLConnectionOperationResponseObjectAssociatedObjectKey;
     return nil;
 }
 
-- (BOOL)isSuccess
+- (BOOL)isFailure
+{
+    return self.isFailed;
+}
+
+- (BOOL)isSuccessful
 {
     if (self.isFinished) {
-        return self.isFailure ? NO : YES;
+        return self.isFailed ? NO : YES;
     }
     return nil;
 }
 
-
+- (BOOL)isSuccess
+{
+    return self.isFailure;
+}
 
 - (void)setResponseObject:(id)responseObject
 {
