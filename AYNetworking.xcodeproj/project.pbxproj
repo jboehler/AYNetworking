@@ -61,7 +61,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2DEDCD9929464FC0AB6F9F51 /* Pods-ios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.xcconfig"; path = "Pods/Pods-ios.xcconfig"; sourceTree = SOURCE_ROOT; };
 		3D41AA1616C671390018B6C4 /* AYNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AYNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D41AA1916C671390018B6C4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3D41AA1C16C671390018B6C4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -91,7 +90,6 @@
 		3DDE356316C67E4E00EFE35D /* AFHTTPClient+AYRequestMethodPUT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPClient+AYRequestMethodPUT.m"; sourceTree = "<group>"; };
 		795C0255596343E2AE9ED337 /* libPods-osx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF99A7F421914D969A9BF2ED /* libPods-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9E39539651F42948C488502 /* Pods-osx.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osx.xcconfig"; path = "Pods/Pods-osx.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +120,6 @@
 				3D41AA1F16C671390018B6C4 /* AYNetworking */,
 				3D41AA1816C671390018B6C4 /* Frameworks */,
 				3D41AA1716C671390018B6C4 /* Products */,
-				2DEDCD9929464FC0AB6F9F51 /* Pods-ios.xcconfig */,
-				E9E39539651F42948C488502 /* Pods-osx.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -438,7 +434,6 @@
 		};
 		3D41AA2C16C671390018B6C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9E39539651F42948C488502 /* Pods-osx.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -454,7 +449,6 @@
 		};
 		3D41AA2D16C671390018B6C4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9E39539651F42948C488502 /* Pods-osx.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -470,7 +464,6 @@
 		};
 		3D41AA3D16C672460018B6C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2DEDCD9929464FC0AB6F9F51 /* Pods-ios.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/AYNetworking.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -485,7 +478,6 @@
 		};
 		3D41AA3E16C672460018B6C4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2DEDCD9929464FC0AB6F9F51 /* Pods-ios.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/AYNetworking.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
