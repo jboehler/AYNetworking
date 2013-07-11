@@ -144,6 +144,9 @@ static void *AFHTTPClientDelegateAssociatedObjectKey;
     // wait until for the success or failure block is run!
     while (!self.isAsyncRequestResponse) {
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
+        if (operation.response) {
+            self.isAsyncRequestResponse = YES;
+        }
     }
     return operation;
 }
