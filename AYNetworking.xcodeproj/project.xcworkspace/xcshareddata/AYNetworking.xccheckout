@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>69429CD6-CCBB-4F6A-B945-969F89430F6A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AYNetworking</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>19E564B1-C6D1-41CF-ADC5-DB1F43A12F8F</key>
+		<string>ssh://github.com/jboehler/AYNetworking.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AYNetworking.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>19E564B1-C6D1-41CF-ADC5-DB1F43A12F8F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/jboehler/AYNetworking.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>19E564B1-C6D1-41CF-ADC5-DB1F43A12F8F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>19E564B1-C6D1-41CF-ADC5-DB1F43A12F8F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AYNetworking</string>
+		</dict>
+	</array>
+</dict>
+</plist>
