@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name                  = "AYNetworking"
-  s.version               = "1.3.1"
+  s.version               = "1.4.0"
   s.license               = { :type => 'MIT', :file => 'LICENSE' }
   s.summary               = 'AYNetworking is a API extension of AFNetworking.'
   s.homepage              = 'https://github.com/jboehler/AYNetworking'
   s.author                = { "Jan Böhler" => "boehler.jan@gmail.com" }
-  s.source                = { :git => "https://github.com/jboehler/AYNetworking.git", :tag => "v1.3.1" }
+  s.source                = { :git => "https://github.com/jboehler/AYNetworking.git", :tag => "v1.4.0" }
   s.source_files          = 'Classes', 'AYNetworking'
   s.requires_arc          = true
 

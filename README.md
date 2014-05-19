@@ -2,7 +2,7 @@
 
 AYNetworking is a set of category with API methods to make it easier to handle requests and response with [AFNetworking](https://github.com/AFNetworking/AFNetworking) Framework.
 
-AYNetworking extent [AFHTTPClient](http://cocoadocs.org/docsets/AFNetworking/1.3.2/Classes/AFHTTPClient.html) and [AFHTTPRequestOperation](http://cocoadocs.org/docsets/AFNetworking/1.3.2/Classes/AFHTTPRequestOperation.html) API of the [AFNetworking](https://github.com/AFNetworking/AFNetworking) Framework.
+AYNetworking extent [AFHTTPClient](http://cocoadocs.org/docsets/AFNetworking/1.4.0/Classes/AFHTTPClient.html) and [AFHTTPRequestOperation](http://cocoadocs.org/docsets/AFNetworking/1.4.0/Classes/AFHTTPRequestOperation.html) API of the [AFNetworking](https://github.com/AFNetworking/AFNetworking) Framework.
 
 Inspired by [LRResty](https://github.com/lukeredpath/LRResty)
 
@@ -14,7 +14,7 @@ You can simple install AYNetworking in your Xcode-project with [CocoaPods](http:
 
     platform :ios, '5.0'
     
-    pod 'AYNetworking', '= 1.3.1'
+    pod 'AYNetworking', '= 1.4.0'
 
 ### Import ###
 
@@ -24,7 +24,7 @@ When you will use the AYNetworking Framework in your code you can just add the i
 
 ### Client ###
 
-First you need a [AFHTTPClient](http://cocoadocs.org/docsets/AFNetworking/1.3.2/Classes/AFHTTPClient.html) class based client.
+First you need a [AFHTTPClient](http://cocoadocs.org/docsets/AFNetworking/1.4.0/Classes/AFHTTPClient.html) class based client.
 
     AFHTTPClient *client = [AFHTTPClient clientWithBaseURL:[NSURL URLWithString:@"http://base.url"]];
 
