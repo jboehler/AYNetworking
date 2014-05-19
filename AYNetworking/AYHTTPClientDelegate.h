@@ -6,6 +6,9 @@
 //  Copyright (c) 2013 Jan Böhler. All rights reserved.
 //
 
+@class AFHTTPClient;
+@class AFHTTPRequestOperation;
+
 @protocol AYHTTPClientDelegate <NSObject>
 
 @optional
